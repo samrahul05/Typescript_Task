@@ -1,0 +1,1 @@
+{"version":3,"sources":["WidgetOrderStats.module.scss","WidgetOrderStats.module.css"],"names":[],"mappings":"AAKA;EACI,aANS;EAOT,6BAAA;EACA,mBAPgB;EAQhB,WAAA;EACA,iBAAA;ACJJ;;ADQE;EACE;IACI,aAhBK;IAiBL,sBAfe;IAgBf,gBAAA;ECLN;AACF;ADOA;EACI;IACE,sBArBiB;IAsBjB,mBAvBc;ECkBlB;AACF;ADQA;EACI;IACI,aA9BK;IA+BL,SAAA;ECNN;AACF","file":"WidgetOrderStats.module.css"}

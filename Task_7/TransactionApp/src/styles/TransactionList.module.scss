@@ -1,0 +1,119 @@
+$default_flex:flex;
+$default_flexDirection:column;
+$default_alingItems:center;
+$default_justifyContent:space-between;
+$default_fontFamily:'system-ui';
+$default_gap:10px;
+$primary_color:#666666b2;
+
+@mixin trans(){
+  display: $default_flex;
+  align-items: $default_alingItems;
+  justify-content:$default_justifyContent;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #ffff;
+  border-radius: 10px;
+}
+@mixin details($default_gap){
+  font-family:$default_fontFamily;
+  display: $default_flex;
+  flex-direction: $default_flexDirection;
+  gap: $default_gap;
+}
+
+.transactionList {
+  display: $default_flex;
+  flex-direction: $default_flexDirection;
+  gap: $default_gap;
+  .transactionItem {
+    @include trans();
+    width: auto;
+    padding: 10px; 
+  .transactionInfo {
+      display: $default_flex;
+      align-items: $default_alingItems;
+  .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+  .details1{
+      @include details(5px);
+        text-align: left;
+      } 
+  .name {
+        font-weight: bold;
+        font-size: 20px;
+      }
+  .date {
+        color:$primary_color;
+        font-size: 20px;
+      }
+    }
+  .details2{
+    @include details(5px);
+      font-weight: 500;
+      font-size: larger;
+  .received, .outgoing {
+        text-align: right;
+      }
+  .amount{
+        font-weight: bold;
+        font-size:larger;
+      }
+    
+  .received {
+        color: rgb(11,195,25);
+      }
+    
+  .outgoing {
+        color: rgb(240,81,83);
+      }
+  .status{
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media  screen  and (max-width: 450px) {
+
+.transactionItem {
+      @include trans();
+      padding: 20px;
+  .transactionInfo{
+        display: $default_flex;
+        align-items: $default_alingItems;
+    .avatar {
+          width: 60px;
+          height: 60px;
+        }
+    .details1 {
+          font-weight: 500;
+          font-size: large;
+          gap: 2px;
+        }
+    .name {
+          font-weight:600;
+          letter-spacing:-1px;
+        }
+    .date {
+          color:$primary_color;
+          font-weight: 400;
+          font-size: 12px;
+          letter-spacing:-1px;
+        }
+      }
+    .details2{ 
+        letter-spacing:-1px;      
+    .status {
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+    }       
+}
+  
+

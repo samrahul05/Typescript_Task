@@ -1,0 +1,38 @@
+$default_flex:flex;
+$default_flexDirection:column;
+$default_alingItems:center;
+$default_textAlign:left;
+$default_justifyContent:space-between;
+$default_fontFamily:'system-ui';
+$default_fontWeight:500;
+
+@mixin header(){
+  display: $default_flex;
+  align-items: $default_alingItems;
+  justify-content:$default_justifyContent;
+}
+body {
+  font-family: $default_fontFamily;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  .App {
+    font-family:$default_fontFamily;
+    text-align: center;
+    padding: 20px;
+    .App-header{
+      @include header();
+      margin:20px 0px 20px 0px;   
+    }
+    .App-header h3{
+      font-weight: $default_fontWeight;  
+    }
+    .App-header h5{
+       color:#666666b2;
+       font-size: medium;
+       font-weight: $default_fontWeight;
+       cursor: pointer; 
+      }
+  }
+}
+

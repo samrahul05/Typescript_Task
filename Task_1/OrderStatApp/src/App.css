@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+.App .App-header {
+  background-color: rgba(40, 44, 52, 0.6117647059);
+  padding: 20px;
+  color: white;
+}
+.App .App-header .App-header h1 {
+  color: #fff;
+  font-family: "sans-serif";
+}
+.App main {
+  padding: 20px;
+}
+
+@media screen and (max-width: 450px) {
+  .App-header h1 {
+    color: #fff;
+    font-family: "sans-serif";
+    font-size: 28px;
+  }
+}

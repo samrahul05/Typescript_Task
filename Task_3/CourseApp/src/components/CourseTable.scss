@@ -1,0 +1,126 @@
+$default_flex:flex;
+$default_flexDirection:column;
+$default_alingItems:center;
+$default_textAlign:left;
+$default_justifyContent:space-between;
+$default_fontSize:20px;
+$default_fontWeight:500;
+$default_gap:5px;
+$primary_color:#666666b4;
+
+@mixin flexing(){
+  display:$default_flex;
+  align-items: $default_alingItems;
+}
+@mixin thead($default_fontSize){
+  color:$primary_color;
+  font-size: $default_fontSize;
+  font-weight: $default_fontWeight;
+}
+@mixin name($default_fontSize){
+  display:$default_flex;
+  font-weight: $default_fontWeight;
+  font-size: $default_fontSize;
+  flex-direction: $default_flexDirection;
+  gap:$default_gap;
+}
+
+@mixin lessons($default_fontSize,$default_textAlign){
+  font-weight: $default_fontWeight;
+  font-size: $default_fontSize;
+  color:$primary_color;
+  text-align: $default_textAlign;
+}
+
+
+.course-table {
+    margin: 20px;
+    header{
+      @include flexing();
+        justify-content: $default_justifyContent;
+        h3{
+            font-size: $default_fontSize; 
+        }
+        h4{
+            color:rgba(128, 0, 128, 0.61);
+            cursor: pointer;
+        }
+      }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        
+     thead  th {
+      @include thead(18px);
+        background-color: transparent;        
+        margin-bottom: 20px;
+      }
+      th, td {
+        padding: 8px;
+        text-align: $default_textAlign;
+        font-weight: $default_fontWeight;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+    }
+  }
+.info{
+    @include flexing();
+      .icon{
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+      .name{
+        @include name(18px);
+      }
+      .lessons{
+        @include lessons(16px,left )
+      }
+  }
+ 
+@media screen and (max-width:450px){
+
+    header{
+      @include flexing();
+      justify-content: $default_justifyContent;
+      h3 {
+        font-size: $default_fontSize - 4;
+      }
+      h4{
+        color:rgba(128, 0, 128, 0.61);
+        cursor: pointer;
+      }
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      thead th {
+        @include thead(14px);
+      }
+      tbody th, td {
+        padding: 8px;
+        font-size: $default_fontSize - 6;
+        text-align: $default_textAlign;
+        font-weight: $default_fontWeight;
+        
+      }
+    }
+    .info {
+      @include flexing();
+    } 
+    .icon {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    .name{
+      @include name(14px);
+    }
+    .lessons {
+      @include lessons(10px,left )
+    }
+    }

@@ -1,0 +1,32 @@
+{
+    "stats":[
+    {
+      "label": "Revenue",
+      "value": "$2.047",
+      "icon": "Revenue-icon.png",
+      "change": -10,
+      "changeType": "negative"
+    },
+    {
+      "label": "Orders",
+      "value": "356",
+      "icon": "Orders-icon.png",
+      "change": 20,
+      "changeType": "positive"
+    },
+    {
+      "label": "Dine in",
+      "value": "220",
+      "icon": "Dinein-icon.png",
+      "change": 10,
+      "changeType": "positive"
+    },
+    {
+      "label": "Take away",
+      "value": "135",
+      "icon": "Takeaway-icon.png",
+      "change": -5,
+      "changeType": "negative"
+  }
+]
+}

@@ -1,0 +1,35 @@
+$Widget_flex:flex;
+$default_alignItems:center;
+$default_flexDirection:column;
+
+
+.widget {
+    display: $Widget_flex;
+    justify-content: space-around;
+    align-items: $default_alignItems;
+    width: auto;
+    margin-top:100px; 
+  }
+  
+ 
+  @media  screen  and (max-width: 450px) {
+    .widget-order-stats{
+        display: $Widget_flex;
+        flex-direction: $default_flexDirection;
+        margin-top:50px;
+    }
+}
+@media (max-width: 768px) {
+    .widget {
+      flex-direction: $default_flexDirection;
+      align-items: $default_alignItems;
+    }
+  }
+
+@media  screen  and (max-width: 1450px) {
+    .widget-order-stats{
+        display: $Widget_flex;
+        gap: 10px;
+    }
+}
+  
